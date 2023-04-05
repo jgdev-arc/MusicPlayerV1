@@ -34,7 +34,7 @@
             app:layout_constraintTop_toBottomOf="@+id/tv" />
 
     <TextView
-            android:id="@+id/song"
+            android:id="@+id/songTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="204dp"
@@ -47,11 +47,68 @@
 
     <Button
             android:id="@+id/backBtn"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="275dp"
+            android:layout_marginBottom="144dp"
+            android:background="@drawable/back_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/forwardBtn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+
+    <Button
+            android:id="@+id/forwardBtn"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:background="@drawable/back_icon"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="143dp"
+            android:background="@drawable/forward_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/backBtn" />
+
+    <Button
+            android:id="@+id/pauseBtn"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginBottom="36dp"
+            android:background="@drawable/pause_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/forwardBtn" />
+
+    <Button
+            android:id="@+id/playBtn"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="100dp"
+            android:background="@drawable/play_icon"
+            app:layout_constraintEnd_toStartOf="@+id/forwardBtn"
+            app:layout_constraintTop_toBottomOf="@+id/songTitle" />
+
+    <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="438dp"
+            android:layout_marginBottom="71dp"
+            app:layout_constraintBottom_toTopOf="@+id/backBtn"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/song" />
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+            android:id="@+id/timeLeftTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="37dp"
+            android:text="00:00"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/seekBar"
+            app:layout_constraintTop_toBottomOf="@+id/seekBar" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
